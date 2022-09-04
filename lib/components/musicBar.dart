@@ -29,7 +29,6 @@ class _MyAppState extends State<MusicBar> {
 
       player.playbackStream.listen((PlaybackState state) {
         if (state.isPlaying) {
-          //debugPrint(musicBarInfo[player.current.index! + 1]['title'].toString());
           setState(() => {
                 playOrPauseIcon = Icons.pause_rounded,
                 img = musicBarInfo[player.current.index! + 1]['img'].toString(),
