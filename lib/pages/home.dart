@@ -85,7 +85,6 @@ class _MainViewState extends State<Home> {
                 ),
               ),
 
-              /// Make it take the rest of the available width
               Expanded(
                 child: views.elementAt(selectedIndex),
               ),
