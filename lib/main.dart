@@ -7,15 +7,19 @@ import 'pages/home.dart';
 import 'pages/login.dart';
 
 void main(List<String> args) async {
+  // Инициализация VLC плеера, с помощью которого будет воспроизводиться аудио
   await DartVLC.initialize();
 
+  // Для работы WebView (страницы с духэтапкой)
   if (runWebViewTitleBarWidget(args)) {
     return;
   }
   WidgetsFlutterBinding.ensureInitialized();
 
+  // Получение токена из файла
   var tokenAndSecret = await getDataTokenAndSecret();
 
+  // Если токена нет, то показывается страница логина
   if (tokenAndSecret == 'null') {
     runApp(const Login());
   } else {
