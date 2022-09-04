@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:crypto/crypto.dart';
 import 'dart:convert';
 
+// Основное VK API. P.S: Обязательно нужен args
 vkApi(String token, String secret, String method, String args) async {
   String deviceId = getRandomString(16);
   double v = 5.95;
@@ -20,6 +21,7 @@ vkApi(String token, String secret, String method, String args) async {
   return resp.json();
 }
 
+// Логиним пользователя. Возвращает токен, секрет, ссылку для перехода и ошибку, если есть
 Future<Map<String, dynamic>> vkLogin(String login, String password) async {
   var loginQueue = await Requests.post("https://oauth.vk.com/token", headers: {
     "User-Agent":
