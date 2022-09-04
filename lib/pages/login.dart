@@ -189,7 +189,6 @@ class _MyAppState extends State<Login> {
                         style: TextStyle(fontSize: 24, color: Colors.white)),
                   ),
                 )
-                //SizedBox(height: 20),
               ],
             ),
           ),
