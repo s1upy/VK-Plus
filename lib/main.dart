@@ -7,7 +7,7 @@ import 'pages/home.dart';
 import 'pages/login.dart';
 
 void main(List<String> args) async {
-  // Инициализация VLC плеера, с помощью которого будет воспроизводиться аудио
+  // Инициализация VLC плеера
   await DartVLC.initialize();
 
   // Для работы WebView (страницы с духэтапкой)
